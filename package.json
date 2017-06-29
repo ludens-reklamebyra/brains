@@ -6,6 +6,9 @@
   "repository": "git@github.com:stianba/brains.git",
   "author": "StianBa <stianba@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=8.0"
+  },
   "dependencies": {
     "axios": "^0.16.2",
     "express": "^4.15.3",
