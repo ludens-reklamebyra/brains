@@ -1,0 +1,14 @@
+{
+  "name": "brains",
+  "version": "1.0.0",
+  "description": "Where the head is.",
+  "main": "server.js",
+  "repository": "git@github.com:stianba/brains.git",
+  "author": "StianBa <stianba@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "express": "^4.15.3",
+    "pug": "^2.0.0-rc.2"
+  }
+}
