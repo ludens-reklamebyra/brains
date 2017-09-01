@@ -9,6 +9,7 @@ const app = express();
 app.set("view engine", "pug");
 app.use("/jobber", work);
 app.use("/artikkel", article);
-app.get("/", (req, res) => res.json({ message: "Hey ho" }));
+app.get("*", (req, res) => res.render("index"));
+app.use(express.static('public'))
 
 app.listen(port);
