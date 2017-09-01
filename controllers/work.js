@@ -1,14 +1,15 @@
 const axios = require("axios");
 
 exports.findOne = async (req, res, next, id) => {
+  console.log();
   const response = await axios(
-    `https://jsonplaceholder.typicode.com/posts/${id}`
+    `${process.env.API_URL}wp/v2/jobber/${id}`
   );
 
-  req.article = response.data;
+  req.work = response.data;
   next();
 };
 
 exports.show = (req, res) => {
-  res.render("article", req.article);
+  res.render("work", req.work);
 };
