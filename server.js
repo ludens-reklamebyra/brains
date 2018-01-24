@@ -14,7 +14,8 @@ const app = express();
 
 app.set('view engine', 'pug');
 app.use(compression());
-app.use(cache('1 hour'));
+// Temp removed caching before go-live.
+//app.use(cache('1 hour'));
 app.use(express.static('public'));
 app.use('/jobber', work);
 app.use('/artikkel', article);
