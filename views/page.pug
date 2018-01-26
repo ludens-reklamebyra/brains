@@ -3,9 +3,9 @@ html(lang='nb')
     title #{title.rendered} - Ludens Reklamebyrå
     meta(property="og:type", content= "article")
     meta(property="og:title", content= title.rendered)
-    meta(property="title", content= title.rendered)
+    meta(name="title", content= title.rendered)
     meta(property="og:description", content= facebookbeskrivelse)
-    meta(property="description", content= metabeskrivelse)
+    meta(name="description", content= metabeskrivelse)
     if facebookbilde
       meta(property="og:image", content= facebookbilde.sizes.top_image_jobs)
     include includes/sharedHead.pug
