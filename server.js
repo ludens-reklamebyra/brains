@@ -7,9 +7,11 @@ const compression = require('compression');
 require('dotenv').config();
 
 const cache = apicache.middleware;
+const devPort = 1337;
+const prodPort = process.getuid();
 
-const port = process.getuid() || 1337;
-//const port = 1337;
+// Remember to change to prodPort when deploying.
+const port = prodPort;
 const app = express();
 
 app.set('view engine', 'pug');
@@ -18,7 +20,7 @@ app.use(compression());
 //app.use(cache('1 hour'));
 app.use(express.static('public'));
 app.use('/jobber', work);
-app.use('/artikkel', article);
+app.use('/aktuelt', article);
 app.get('*', pages);
 
 app.listen(port);
