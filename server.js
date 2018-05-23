@@ -3,6 +3,7 @@ const apicache = require('apicache');
 const work = require('./routes/work');
 const article = require('./routes/article');
 const pages = require('./routes/pages');
+const service = require('./routes/service');
 const compression = require('compression');
 require('dotenv').config();
 
@@ -20,6 +21,7 @@ app.use(cache('1 hour'));
 app.use(express.static('public'));
 app.use('/jobber', work);
 app.use('/aktuelt', article);
+app.use('/tjenester', service);
 app.get('*', pages);
 
 app.listen(port);
