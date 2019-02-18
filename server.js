@@ -18,6 +18,7 @@ app.use(compression());
 app.use(cache('1 hour'));
 app.use(express.static('public'));
 app.use('/jobber', work);
+app.use('/aktuelt', article);
 app.use('/blogg', article);
 app.use('/tjenester', service);
 app.get('*', pages);
