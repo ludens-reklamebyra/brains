@@ -8,8 +8,9 @@ const compression = require('compression');
 require('dotenv').config();
 
 const cache = apicache.middleware;
-const port = process.env.NODE_ENV === 'development' ? 1337 : process.getuid();
-
+const prodPort = process.geteuid();
+const devPort = 1337;
+const port = prodPort;
 const app = express();
 
 app.set('view engine', 'pug');
