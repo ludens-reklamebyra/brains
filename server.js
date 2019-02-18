@@ -8,8 +8,10 @@ const compression = require('compression');
 require('dotenv').config();
 
 const cache = apicache.middleware;
-const prodPort = process.geteuid();
 const devPort = 1337;
+const prodPort = process.getuid();
+
+// Remember to change to prodPort when deploying.
 const port = prodPort;
 const app = express();
 
