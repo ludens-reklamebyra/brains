@@ -9,7 +9,7 @@ const port = prodPort;
 const app = express();
 
 app.get('*', (req, res) => {
-  res.redirect('https://ludensgruppen.no' + req.path, 302);
+  res.redirect('https://ludensgruppen.no' + req.path, 301);
 });
 
 app.listen(port, () => console.log(`Server is listening on port ${port}`));
